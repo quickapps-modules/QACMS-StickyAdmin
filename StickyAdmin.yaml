@@ -1,0 +1,5 @@
+name: StickyAdmin
+description: Adds a sticky admin menu in front office.
+category: Appearance
+version: 1.0
+core: 1.x
