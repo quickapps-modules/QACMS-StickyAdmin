@@ -22,3 +22,13 @@
             }
         );
     });
+    
+    function sticky_admin_pos(to) {
+        if (to) {
+            $('#stickyNav').removeClass('stickyNav-bottom');
+            $('#stickyNav').addClass('stickyNav-top');
+        } else {
+            $('#stickyNav').removeClass('stickyNav-top');
+            $('#stickyNav').addClass('stickyNav-bottom');
+        }
+    }

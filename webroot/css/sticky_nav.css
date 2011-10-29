@@ -1,9 +1,11 @@
-#stickyNav{
+.stickyNav-top { top:0px;}
+.stickyNav-bottom { bottom:0px;}
+
+#stickyNav {
     text-shadow:none;
     height:35px;
     border-bottom:1px solid #ddd;
     position:fixed;
-    top:0px;
     left:0px;
     right:0px;
     background:#fff url(../img/nav.png) repeat-x center left;

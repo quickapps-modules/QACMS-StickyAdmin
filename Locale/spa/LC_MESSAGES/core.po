@@ -31,3 +31,15 @@ msgstr "Comentarios (%s)"
 
 msgid "Appearance"
 msgstr "Apariencia"
+
+msgid "Roles"
+msgstr "Roles"
+
+msgid "Show sticky bar to selected user roles"
+msgstr "Mostrar barra a los roles de usuario indicados"
+
+msgid "Stick at top"
+msgstr "Pegar arriba"
+
+msgid "Stick at bottom"
+msgstr "Pegar abajo"
