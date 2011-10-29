@@ -2,7 +2,7 @@
     <ul>
         <li><a href="<?php echo $this->Html->url('/admin'); ?>"><?php echo __d('sticky_admin', 'Dashboard'); ?></a></li>
         <?php if(isset($Layout['node']['Node']['slug'])): ?>
-        <li><a href="<?php echo $this->Html->url('/admin/node/contents/edit/' . $Layout['node']['Node']['slug']); ?>"><?php echo __d('sticky_admin', 'Edit'); ?></a></li>
+        <li><a href="<?php echo $this->Html->url('/admin/node/contents/edit/' . $Layout['node']['Node']['slug']); ?>" target="_blank"><?php echo __d('sticky_admin', 'Edit'); ?></a></li>
 
         <?php endif; ?>
         <li><a href="<?php echo $this->Html->url('/admin/node/contents/create/'); ?>"><?php echo __d('sticky_admin', 'New Content'); ?></a></li>
