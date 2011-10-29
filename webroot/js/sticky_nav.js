@@ -22,8 +22,8 @@
             }
         );
     });
-    
-    function sticky_admin_pos(to) {
+
+    QuickApps.sticky_admin_pos = function (to) {
         if (to) {
             $('#stickyNav').removeClass('stickyNav-bottom');
             $('#stickyNav').addClass('stickyNav-top');
@@ -31,4 +31,4 @@
             $('#stickyNav').removeClass('stickyNav-top');
             $('#stickyNav').addClass('stickyNav-bottom');
         }
-    }
+    };
