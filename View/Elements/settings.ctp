@@ -8,7 +8,6 @@
                 array(
                     'type' => 'select', 
                     'multiple' => 'checkbox', 
-                    'value' => 'StickyAdmin',
                     'options' => $roles,
                     'label' => __d('sticky_admin', 'Show sticky bar to selected user roles'),
                     'value' => @array_merge((array)Configure::read('Modules.StickyAdmin.settings.roles'), array(1))
@@ -17,5 +16,5 @@
         ?>
     <?php echo $this->Html->useTag('fieldsetend'); ?>
 
-    <?php echo $this->Form->submit(__d('user', __d('user', 'Save All'))); ?>
+    <?php echo $this->Form->submit(__d('user', 'Save all')); ?>
 <?php echo $this->Form->end(); ?>

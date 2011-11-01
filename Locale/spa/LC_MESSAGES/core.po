@@ -43,3 +43,6 @@ msgstr "Pegar arriba"
 
 msgid "Stick at bottom"
 msgstr "Pegar abajo"
+
+msgid "Configuration"
+msgstr "Configuración"

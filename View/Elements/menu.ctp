@@ -10,6 +10,7 @@
         <li><a href="<?php echo $this->Html->url('/admin/node/contents/create/'); ?>"><?php echo __d('sticky_admin', 'New Content'); ?></a></li>
         <li><a href="<?php echo $this->Html->url('/admin/comment/unpublished/'); ?>"><?php echo __d('sticky_admin', 'Comments (%s)', $comments); ?></a></li>
         <li><a href="<?php echo $this->Html->url('/admin/system/themes'); ?>"><?php echo __d('sticky_admin', 'Appearance'); ?></a></li>
+        <li><a href="<?php echo $this->Html->url('/admin/system/configuration'); ?>"><?php echo __d('sticky_admin', 'Configuration'); ?></a></li>
 
         <li class="search">
             <form action="<?php echo $this->Html->url('/s'); ?>" method="get">
