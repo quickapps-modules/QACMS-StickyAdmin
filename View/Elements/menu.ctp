@@ -13,9 +13,9 @@
         <li><a href="<?php echo $this->Html->url('/admin/system/configuration'); ?>"><?php echo __d('sticky_admin', 'Configuration'); ?></a></li>
 
         <li class="search">
-            <form action="<?php echo $this->Html->url('/s'); ?>" method="get">
-                <input type="text" name="criteria" value="<?php echo @$criteria; ?>" />
-                <input class="searchbutton" type="submit" value="" />
+            <form action="" method="post" onSubmit="return false;">
+                <input type="text" id="sticky-admin-search" value="<?php echo @$criteria; ?>" />
+                <input class="searchbutton" type="button" value="" onClick="$(location).attr('href', '<?php echo $this->Html->url('/s/', true); ?>' + $('#sticky-admin-search').val());" />
             </form>
         </li>
     </ul>
