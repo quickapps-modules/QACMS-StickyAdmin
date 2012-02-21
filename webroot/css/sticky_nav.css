@@ -72,3 +72,7 @@
 #stickyNav input.searchbutton:hover{
     background-color:#D9D9DA;
 }
+
+.sticky-admin-block-hover { border:1px dotted #F57770 !important; position:relative !important; overflow:hidden; }
+.sticky-admin-block-hover .sa-block-btns { position:absolute; top:0; right:0; padding:3px; background:#303030; }
+.sticky-admin-block-hover .sa-block-btns a { color:#fff !important; text-shadow:none; }

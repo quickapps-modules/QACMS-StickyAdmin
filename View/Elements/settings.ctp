@@ -11,4 +11,14 @@
             )
         );
     ?>
+    <?php
+        echo  $this->Form->input('Module.settings.blocks_edit',
+            array(
+                'type' => 'radio',
+                'options' => array(0 => __d('sticky_admin', 'No'), 1 => __d('sticky_admin', 'Yes')),
+                'legend' => __d('sticky_admin', 'Display edit button on block hover'),
+                'separator' => '<br />'
+            )
+        );
+    ?>
 <?php echo $this->Html->useTag('fieldsetend'); ?>
