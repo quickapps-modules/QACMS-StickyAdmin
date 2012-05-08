@@ -11,11 +11,9 @@
  * @link     http://www.quickapps.es
  */
 class StickyAdminHookHelper extends AppHelper {
-
     public function beforeLayout() {
-        if (strpos($this->_View->Layout->themeName(), 'Admin') === false &&
-            (
-                $this->_View->Layout->is('user.admin') ||
+        if (!QuickApps::is('theme.admin') &&
+            (   $this->_View->Layout->is('user.admin') ||
                 count(array_intersect((array)Configure::read('Modules.StickyAdmin.settings.roles'), $this->_View->Layout->userRoles()))
             )
         ) {
@@ -26,18 +24,9 @@ class StickyAdminHookHelper extends AppHelper {
                     )
                 )
             );
+            $this->_View->viewVars['Layout']['javascripts']['file'][] = '/sticky_admin/js/sticky_nav.js';
+            $this->_View->viewVars['Layout']['stylesheets']['all'][] = '/sticky_admin/css/sticky_nav.css';
             $this->_View->viewVars['Layout']['footer'][] = $this->_View->element('menu', array('comments' => $comments), array('plugin' => 'StickyAdmin'));
-
-            $this->_View->Layout->script('/sticky_admin/js/sticky_nav.js');
-            $this->_View->Layout->css('/sticky_admin/css/sticky_nav.css', 'all');
-
-            if (Configure::read('Modules.StickyAdmin.settings.blocks_edit')) {
-                $this->_View->Layout->script('
-                    $(document).ready(function() {
-                        QuickApps.sticky_admin_editable_blocks();
-                    });
-                ', 'inline');
-            }
         }
     }
 }
