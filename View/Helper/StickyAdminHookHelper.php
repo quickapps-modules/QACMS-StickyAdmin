@@ -14,7 +14,7 @@ class StickyAdminHookHelper extends AppHelper {
     public function beforeLayout() {
         if (!QuickApps::is('theme.admin') &&
             (   $this->_View->Layout->is('user.admin') ||
-                count(array_intersect((array)Configure::read('Modules.StickyAdmin.settings.roles'), $this->_View->Layout->userRoles()))
+                count(array_intersect((array)Configure::read('Modules.StickyAdmin.settings.roles'), QuickApps::userRoles()))
             )
         ) {
             $comments = ClassRegistry::init('Comment.Comment')->find('count',
